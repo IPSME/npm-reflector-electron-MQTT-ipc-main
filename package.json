@@ -1,0 +1,36 @@
+{
+  "name": "@ipsme/reflector-electron-mqtt-ipc-main",
+  "version": "0.1.0",
+  "description": "Reflector between an MQTT messaging environment and Electron IPC (main process).",
+  "exports": {
+    "node": {
+      "require": "./dist/reflector-ipc-main.cjs.js"
+    },
+    "default": "./dist/reflector-ipc-main.cjs.js"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "build": "rollup --config",
+    "test": "test.js",
+    "clean": "del dist && echo OK"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IPSME/npm-reflector-electron-MQTT-ipc-main.git"
+  },
+  "author": "K.Nevelsteen, PhD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IPSME/npm-reflector-electron-MQTT-ipc-main/issues"
+  },
+  "homepage": "https://github.com/IPSME/npm-reflector-electron-MQTT-ipc-main#readme",
+  "dependencies": {
+    "@ipsme/msgcache-dedup": "^0.1.16",
+    "@ipsme/msgenv-mqtt": "^0.2.9",
+    "@knev/bitlogr": "^3.2.2"
+  },
+  "devDependencies": {
+    "del-cli": "^7.0.0",
+    "rollup": "^4.61.1"
+  }
+}
